@@ -1,0 +1,719 @@
+body {
+
+background-color:#0D1117;
+color:#1ea19a; 
+margin: 0%;
+padding-left: 80px; 
+padding-right: 80px;
+
+
+
+p{
+    color:white;
+    font-weight: 200;
+    font-size: 25px;
+}
+
+h1,h2,h3,h4,h5 {
+
+    color:#1ea19a; 
+    font-weight:100;
+}
+}
+
+@media (max-width:700px) {
+    body {
+
+
+padding-left: 0px; 
+padding-right: 0px;
+}
+p {
+    font-size:18px!important;
+}
+
+.margin-top-50 {
+    margin-top:50px!important;
+}
+
+}
+
+nav {
+    overflow-x: hidden;
+}
+
+nav ul {
+    list-style:none; 
+    font-weight: 100; 
+    font-size: 25px;
+     gap:60px;
+}
+
+#top-icons i {
+    /* Styles for ALL <i> icons inside mobile nav */
+    
+    font-size: 35px;
+    padding-left:32px;
+    line-height: 52.5px;
+  }
+
+nav div i {
+    font-size:15px;
+}
+
+
+nav ul li a {
+    text-decoration: none; 
+    color:#1ea19a; 
+}
+
+ li a:hover {
+    color: aliceblue !important;
+}
+
+li:hover  .display-blur{
+    display: block!important;
+}
+
+
+
+#mm :nth-child(1) {
+    width:40px; 
+    height:1px; 
+    background-color: beige;
+}
+
+#mm :nth-child(2) {
+    width:33px; 
+    height:1px; 
+    background-color: beige; 
+    margin-top: 5px;
+}
+
+#mm :nth-child(3) {
+    width:27px; 
+    height:1px; 
+    background-color: beige; 
+    margin-top: 5px;
+}
+
+body.day #mm :nth-child(1) {
+    background-color: black!important;
+}
+body.day #mm :nth-child(2) {
+    background-color: black!important;
+}
+body.day #mm :nth-child(3) {
+    background-color: black!important;
+}
+
+body.day #current-tech button:hover {
+    color:black!important;    
+}
+
+#bottom-mobile-nav a i{
+    font-size:38px;
+    color:#1ea19a;
+}
+
+#name-container{
+height:100px;
+
+}
+
+#cv-button {
+    background-color: transparent; 
+    border-radius: 20px; 
+    border: 1px solid #1ea19a; 
+    text-decoration: none; 
+    color:#1ea19a; 
+    font-size:25px;  
+    font-weight: 200;
+    transition: transform 1s;
+    display:inline-block;
+}
+
+@media(min-width:700px) {
+.margin-left-60{
+    margin-left:60px!important;
+}
+}
+.fully-visible{
+        opacity: 1!important;
+    }
+
+#c {
+top:0%;
+width:100vw;
+position:fixed; 
+transition: 1.2s;   
+height:100vh;  
+background-color:#0D1117;   
+z-index:9999999;
+}
+
+.x-left{
+width:33px; 
+transform: rotate(45deg);  
+height:1px; 
+background-color: beige;
+    }
+
+.x-right{
+width:33px; 
+transform: rotate(-45deg);  
+height:1px; 
+background-color: beige;
+    }
+
+
+#c ul{
+
+    font-size: 35px; 
+}
+
+.blur-background-nav{
+bottom:40%; 
+right:50%; 
+transform: translate(50%);
+height:25%; 
+width:130%; 
+background-color: #1ea19a; 
+filter: blur(12px);
+z-index:-1;
+}
+
+
+.nightIcon{
+        
+    }
+
+    .soundIcon{
+        
+    }
+
+@media(min-width:700px) {
+
+    .margin-top-100{
+    margin-top:100px!important;
+}
+
+.margin-top-150{
+    margin-top:150px!important;
+}
+
+}
+
+.left-100{
+    left:100%!important;
+    
+}
+
+.left-100.left-0{
+    left:0%!important;
+    
+    
+}
+
+.bg-button-navy{
+    background-color:#0D1117;
+    border-radius: 20px;
+    border: 1px solid #1ea19a;
+}
+.text-white{
+    color: white!important;
+    font-weight: 100;
+}
+
+  .font-size-50px{
+    font-size:48px;
+  }
+
+  #hiddenElements{
+  transition: 0.7s;
+  }
+
+button {
+    transition: all 1s; 
+}
+
+
+#cv-button:hover {
+    color:aliceblue!important;
+    transform: translate(15px, -10px)!important; /* Right 15px, Up 10px */
+
+}
+
+#current-tech button:hover {
+    color:aliceblue!important;
+    transform: translate(15px, -10px)!important; /* Right 15px, Up 10px */
+    
+}
+
+
+
+    button.g:hover {
+    color:aliceblue!important;
+    transform: translateY(10px); 
+
+}
+
+
+
+.blur-bg{
+height:100px;  
+filter:blur(120px); 
+background-color:#1ea19a; 
+z-index:-1; position: 
+absolute; bottom: 0; 
+left:-80px;
+}
+
+.blur-bg-30-right-0{
+    height:100px;
+     width:30%; 
+    filter:blur(120px); 
+    background-color:#1ea19a;
+    z-index: -1; 
+    position: absolute; 
+    top: 0; 
+    right:0;
+}
+
+.blur-bg-30-left-bottom-0{
+    height:100px;
+     width:30%; 
+    filter:blur(120px); 
+    background-color:#1ea19a;
+    z-index: -1; 
+    position: absolute; 
+    bottom: 0; 
+    left:0;
+}
+
+
+.blur-bg-30 {
+    height:100px; 
+    width:30%; 
+    filter:blur(120px); 
+    background-color:#1ea19a; 
+    z-index: -1; 
+    position:absolute; 
+    bottom: 20%; 
+    right:0;
+
+}
+
+.blur-bg-20 {
+    height:50px; 
+    width:20%; 
+    filter:blur(120px); 
+    background-color:#1ea19a; 
+    z-index: -1; 
+    position: absolute; 
+    top:0%; 
+    left:0;
+
+}
+
+#showMoreButtonText{
+    font-weight: 200;
+    font-size: 25px;
+}
+
+.lime-text{
+    color:#1ea19a;
+
+}
+
+.day{
+      background:white;
+      color:black;  
+
+   
+  }
+ 
+
+
+/* animations start here */
+
+@keyframes nav-bar-desktop {
+
+0% {
+  transform: translateX(-100%);
+  opacity:0;
+}
+100% {
+transform: translateX(0%);
+opacity:1;
+}
+}
+
+
+@keyframes intro {
+
+0% {
+  transform: translateX(-100px);
+  opacity:0;
+}
+100% {
+transform: translateX(0px);
+opacity:1;
+}
+}
+
+
+@keyframes intro-right-mobile {
+
+0% {
+  transform: translateX(-200px);
+  opacity:0;
+}
+100% {
+transform: translateX(0px);
+opacity:1;
+}
+}
+
+
+
+@keyframes intro-right-desktop {
+
+0% {
+  transform: translateY(-200px);
+  opacity:0;
+}
+100% {
+transform: translateY(0px);
+opacity:1;
+}
+}
+
+.intro{
+    animation-name: intro;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+}
+
+.intro-delayed-1-second{
+    animation-name: intro;
+    animation-duration: 0.7s;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+    opacity:0;
+}
+
+.intro-delayed-2-second{
+    animation-name: intro;
+    animation-duration: 0.7s;
+    animation-delay: 0.6s;
+    animation-fill-mode: forwards;
+    opacity:0;
+}
+
+.intro-delayed-3-second{
+    animation-name: intro;
+    animation-duration: 0.7s;
+    animation-delay: 0.9s;
+    animation-fill-mode: forwards;
+    opacity:0;
+}
+
+.intro-delayed-4-second{
+    animation-name: intro;
+    animation-duration: 0.7s;
+    animation-delay: 1.2s;
+    opacity:0;
+}
+
+.intro-right{
+    animation-name: intro-right-desktop;
+    animation-duration: 1.7s;
+    animation-delay: 0.9s;
+    animation-fill-mode:forwards;
+    opacity:0;
+}
+
+@keyframes about-me-animation {
+0%{
+   transform:translateX(-400px); 
+   opacity: 0;
+}
+100%{
+   transform:translateX(0px); 
+   opacity: 1;
+}
+
+}
+
+@keyframes current-tech-animation {
+0%{
+   transform:translateX(350%); 
+   opacity: 0;
+}
+100%{
+   transform:translateX(0px); 
+   opacity: 1;
+}
+
+}
+
+.current-tech-animation {
+  animation-name: current-tech-animation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  
+}
+
+.about-me-animation {
+  animation-name: about-me-animation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@media (max-width: 700px) {
+  .intro-right {
+    animation-name: intro-right-mobile;
+  }
+}
+
+/* Desktop: apply Y-direction animation */
+@media (min-width: 700px) {
+  .intro-right {
+    animation-name: intro-right-desktop;
+  }
+}
+
+.invisible{
+    opacity:0;
+}
+
+.element-hidden{
+    opacity:0;
+}
+
+@keyframes d {
+  0%  {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  
+  
+}
+
+.fade{
+    animation-name:d;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    
+    
+}
+
+.nav-bar-desktop-animation{
+    animation-name: nav-bar-desktop;
+    animation-duration: 1.5s;
+    animation-fill-mode:forwards;
+    
+}
+
+.animation-delay {
+    animation-delay: 1s;
+ }
+/* animations end here */
+
+
+/* Day Mode starts here*/
+body.day  .bg-button-navy{
+    background-color:white;
+   
+}
+body.day #cv-button:hover {
+    color:black!important;
+    transform: translate(15px, -10px)!important; /* Right 15px, Up 10px */
+
+}
+
+ body.day {
+     background:white;
+ }
+
+ body.day p {
+     color:black;
+ }
+
+ body.day .x-left{
+background-color: black!important;
+    }
+
+body.day .x-right{
+background-color: black!important;
+    }
+
+body.day #current-tech h1{
+    color:#1ea19a;
+}
+
+body.day i {
+    color:#1ea19a!important; 
+}
+
+body.day footer ul li a:hover {
+      color:black!important;
+
+}
+/* Day Mode Blur Background */
+body.day .blur-bg-30-right-0 {
+  background-color: #1ea19a; /* Choose a light color */
+}
+
+body.day .blur-bg-30 {
+  background-color: #1ea19a; /* Choose a light color */
+}
+
+body.day .blur-bg-20 {
+  background-color: #1ea19a; /* Choose a light color */
+}
+
+body.day .blur-bg {
+  background-color:#1ea19a; /* Choose a light color */
+}
+
+body.day .white-line {
+    
+    background-color: #1ea19a;
+}
+
+body.day .vvv {
+  color: red; /* Choose a light color */
+}
+
+body.day #showMoreButton span {
+    color:#1ea19a!important; 
+}
+
+
+body.day #mm:nth-child()  {
+  background-color: black!important; 
+}
+
+body.day #c  {
+  background-color: white!important; /* Choose a light color */
+  color:#1ea19a!important; 
+}
+
+body.day #c .mobile-menu-line {
+  background-color: black!important; /* Choose a light color */
+  
+}
+/* Day Mode Blur Background ends here */
+/* day mode ends here */
+@keyframes bounce {
+  0%, 100%  {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+.bounce-animation{
+    animation: bounce 2.2s infinite;
+}
+
+.button-trigger{
+        
+    }
+
+
+#current-tech button{
+    border-radius: 20px; 
+    font-size:25px; 
+    color:#1ea19a; 
+    font-weight:100; 
+    transition: transform 1s;
+}
+
+
+
+
+.previous-project-image-card-border {
+    box-shadow: 0px 0px 22px #1ea19a;
+    overflow: hidden;
+    border: 2px solid #1ea19a; 
+    border-radius: 25px;
+}
+
+
+
+.hidden{
+    max-height:0px;
+    overflow: hidden;
+}
+
+.show{
+    max-height:500px;
+}
+
+@media(max-width:600px) {
+    .show{
+    max-height:1000px;
+}
+
+}
+
+footer ul li a:hover {
+      color:white!important;
+      transition: 0.2s;
+}
+
+footer ul {
+    transition: 10s; 
+    list-style: none; 
+    font-weight:100;  
+    font-size:32px;
+}
+
+
+footer ul li a{
+    color:#1ea19a;
+    text-decoration:none;
+}
+
+@media(max-width:700px) {
+    footer ul {
+    
+    font-size:19px;
+}
+}
+
+
+
+.white-line {
+    width:2px; 
+    height:150px; 
+    background-color: aliceblue;
+}
+
+#fixed {
+    right:10px;
+}
+
+#fixed a i {
+    font-size:48px;
+    color:#1ea19a;
+}
+#fixed a:nth-child(3) i {
+    font-size: 43px;
+    color: #1ea19a;
+  }
+
+
+.mobile-menu-line{
+        height:3px; 
+        display: block; 
+        background-color: white;
+    }
