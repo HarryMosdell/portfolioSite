@@ -218,7 +218,19 @@ ScrollAnimation(about_me,230,'about-me-animation');
     
     }); 
     });
+    
+    const previous_project_links= document.querySelectorAll('#previous-projects a');
 
+    previous_project_links.forEach(previous_project_link=> {
+    
+        previous_project_link.addEventListener('click', () => {
+            if (sound===true) {
+              
+                sound1.play();
+            }
+        
+        }); 
+        });
 
   const fixedNavbarElemments= document.querySelectorAll('#fixed a');
   
