@@ -77,23 +77,23 @@ showMoreButton.addEventListener('click', function() {
     }
 } );
 
+//generic scroll function here
+function ScrollAnimation(element, Yposition, animation) {
 
+    document.addEventListener('scroll', function() {
+         
+             if(window.scrollY > Yposition) {
+                element.classList.add(animation);
+      
+             }  
+         });
 
+}
 
-// start of scroll functions in JS
+var about_me= document.getElementById('about-me-section');
 
-document.addEventListener('scroll', function() {
-  
-    var about_me= document.getElementById('about-me-section');
-   
-         console.log(window.scrollY); // vertical scroll position in pixels
-  
-  
-         if(window.scrollY > 230) {
-          about_me.classList.add('about-me-animation');
-  
-         }  
-     });
+ScrollAnimation(about_me,230,'about-me-animation');
+
   
      document.addEventListener('scroll', function () {
     var button_animation = document.querySelectorAll('.button-trigger');
@@ -119,60 +119,22 @@ document.addEventListener('scroll', function() {
     }
   });
   
-  
-      document.addEventListener('scroll', function() {
-    
-     var elem= document.getElementById('azzzz');
-     
-          console.log(window.scrollY); // vertical scroll position in pixels
-  
-  
-          if(window.scrollY > 1500) {
-          elem.classList.add('fade');
-  
-          }  
-      });
       
-      
-      document.addEventListener('scroll', function() {
-    
-          var secondRow= document.getElementById('secondRow');
-         console.log(window.scrollY); // vertical scroll position in pixels
-       //was 1850
-  
-         if(window.scrollY > 2000) {
-          secondRow.classList.add('fade');
-  
-         }  
-     });
-  
-  
-  
-     document.addEventListener('scroll', function() {
-    
-    var thirdRow= document.getElementById('thirdRow');
-   console.log(window.scrollY); 
-  
-  
-   if(window.scrollY > 2300) {
-      thirdRow.classList.add('fade');
-  
-   }  
-  });
+      var elem= document.getElementById('firstRow');
+      ScrollAnimation(elem,1500,'fade');
+
+
+      var secondRow= document.getElementById('secondRow');
+      ScrollAnimation(secondRow,2000,'fade');
+
+      var thirdRow= document.getElementById('thirdRow');
+      ScrollAnimation(thirdRow,2300,'fade');
   
 
-  document.addEventListener('scroll', function() {
-    
-    var connect_section= document.getElementById('connect-section');
-   console.log(window.scrollY); 
-  
-  
-   if(window.scrollY > 3050) {
-    connect_section.classList.add('about-me-animation');
-  
-   }  
-  });
+      var connect_section= document.getElementById('connect-section');
+      ScrollAnimation(connect_section,3050,'about-me-animation');
 
+ 
 // end of scroll functions in JS
 
    let dayOrNight="night";
@@ -299,4 +261,3 @@ document.addEventListener('scroll', function() {
   
   }); 
   });
-  
