@@ -121,14 +121,14 @@ ScrollAnimation(about_me,230,'about-me-animation');
   
       
       var elem= document.getElementById('firstRow');
-      ScrollAnimation(elem,1500,'fade');
+      ScrollAnimation(elem,1600,'fade');
 
 
       var secondRow= document.getElementById('secondRow');
-      ScrollAnimation(secondRow,2000,'fade');
+      ScrollAnimation(secondRow,2100,'fade');
 
       var thirdRow= document.getElementById('thirdRow');
-      ScrollAnimation(thirdRow,2300,'fade');
+      ScrollAnimation(thirdRow,2500,'fade');
   
 
       var connect_section= document.getElementById('connect-section');
@@ -150,7 +150,11 @@ ScrollAnimation(about_me,230,'about-me-animation');
           dayNite.classList.toggle('fa-sun');
           bodyElement.classList.toggle('day');
           mobileMenu.style.transition="none";
-          lampSound.play();
+
+          if(sound===true) {
+            lampSound.play();
+          } 
+          
           if(dayOrNight==="night") {
             dayOrNight="day";
             console.log(dayOrNight);
