@@ -33,7 +33,10 @@ onv.addEventListener('click', function() {
     Body.classList.toggle("overflow-hidden");
     Body.style.position = 'fixed';
     Body.style.width = '100%';
-
+     if (sound===true) {
+        
+          sound1.play();
+      }
 });
 
 
@@ -43,7 +46,10 @@ Body.classList.toggle("overflow-hidden");
 xxxxxx.classList.toggle("left-0");
 Body.style.position = '';
 Body.style.width = '';
-
+ if (sound===true) {
+        
+          sound1.play();
+      }
 });
 
 
@@ -125,14 +131,14 @@ ScrollAnimation(about_me,230,'about-me-animation');
 
 
       var secondRow= document.getElementById('secondRow');
-      ScrollAnimation(secondRow,2100,'fade');
+      ScrollAnimation(secondRow,2250,'fade');
 
       var thirdRow= document.getElementById('thirdRow');
-      ScrollAnimation(thirdRow,2500,'fade');
+      ScrollAnimation(thirdRow,2600,'fade');
   
 
       var connect_section= document.getElementById('connect-section');
-      ScrollAnimation(connect_section,3050,'about-me-animation');
+      ScrollAnimation(connect_section,3250,'about-me-animation');
 
  
 // end of scroll functions in JS
@@ -200,13 +206,18 @@ ScrollAnimation(about_me,230,'about-me-animation');
   });
   });
   
+  function soundPlay(){
+    if (sound===true) {
+        
+        sound1.play();
+        
+    }
+  }
+
   const cvButton= document.getElementById('cv-button');;    
   
     cvButton.addEventListener('click', () => {
-      if (sound===true) {
-        
-          sound1.play();
-      }
+         soundPlay();
   }); 
 
   
@@ -215,11 +226,9 @@ ScrollAnimation(about_me,230,'about-me-animation');
   footerLinks.forEach(footerLink => {
     
     footerLink.addEventListener('click', () => {
-        if (sound===true) {
-          
-            sound1.play();
-        }
-    
+        
+       soundPlay();
+       
     }); 
     });
     
@@ -228,10 +237,8 @@ ScrollAnimation(about_me,230,'about-me-animation');
     previous_project_links.forEach(previous_project_link=> {
     
         previous_project_link.addEventListener('click', () => {
-            if (sound===true) {
-              
-                sound1.play();
-            }
+          
+          soundPlay();
         
         }); 
         });
@@ -241,24 +248,29 @@ ScrollAnimation(about_me,230,'about-me-animation');
   fixedNavbarElemments.forEach(fixedNavbarElemment => {
     
     fixedNavbarElemment.addEventListener('click', () => {
-        if (sound===true) {
-          
-            sound1.play();
-        }
+     
+     soundPlay();
     
     }); 
     });
 
+ const mobileNavIcons= document.querySelectorAll('#bottom-mobile-nav a');
+  
+    mobileNavIcons.forEach(mobileNavIcon => {
+    
+        mobileNavIcon.addEventListener('click', () => {
+      
+        soundPlay();
+    
+    }); 
+    });
 
   const elements= document.querySelectorAll("button");    
   
   elements.forEach(el => {
     
   el.addEventListener('click', () => {
-      if (sound===true) {
-        
-          sound1.play();
-      }
+    soundPlay();
   
   }); 
   });
