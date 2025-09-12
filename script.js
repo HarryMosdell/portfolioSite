@@ -143,7 +143,7 @@ ScrollAnimation(about_me,230,'about-me-animation');
  
 // end of scroll functions in JS
 
-   let dayOrNight="night";
+   let dayOrNight=mode=localStorage.getItem('mode') || 'night';
    bodyElement= document.getElementById('Body');
    const mobileMenu = document.getElementById('c');
    dayAndNightElemments=document.querySelectorAll('.nightIcon');
@@ -164,11 +164,14 @@ ScrollAnimation(about_me,230,'about-me-animation');
           if(dayOrNight==="night") {
             dayOrNight="day";
             console.log(dayOrNight);
+            localStorage.setItem('mode', 'day');
+            
           }
           else {
             dayOrNight="night";
             console.log(dayOrNight);
-
+            localStorage.setItem('mode', 'night');
+          
           }
           setTimeout(() => {
             mobileMenu.style.transition = "";
@@ -176,9 +179,23 @@ ScrollAnimation(about_me,230,'about-me-animation');
       })
       
   }); 
+      
+ 
   
-  
-  
+  document.addEventListener('DOMContentLoaded', ()=> {
+
+   mode=localStorage.getItem('mode');
+   if(mode=== 'day') {
+    bodyElement.classList.add('day');
+    dayAndNightElemments.forEach(dayNite => {
+      dayNite.classList.remove('fa-moon');
+      dayNite.classList.add('fa-sun');
+    });
+   }
+
+  } )
+
+
   let sound=true;
   
   const soundIcons= document.querySelectorAll(".soundIcon");    
