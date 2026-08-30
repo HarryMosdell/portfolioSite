@@ -94,11 +94,10 @@ function ScrollAnimation(element, Yposition, animation) {
              }  
          });
 
+
 }
 
-var about_me= document.getElementById('about-me-section');
 
-ScrollAnimation(about_me,230,'about-me-animation');
 
   
      document.addEventListener('scroll', function () {
@@ -125,20 +124,72 @@ ScrollAnimation(about_me,230,'about-me-animation');
     }
   });
   
+
+    let observer = new IntersectionObserver((entries)=> {
+           entries.forEach((entry)=> {
+            
+              if( (entry.isIntersecting && entry.target.id==="firstRow")){
+             entry.target.classList.add("fade");
+           
+           
+             }
+             else if( (entry.isIntersecting && entry.target.id==="secondRow")){
+              entry.target.classList.add("fade");
+            
+              }
+              else if( (entry.isIntersecting && entry.target.id==="thirdRow")){
+                entry.target.classList.add("fade");
+              
+                }
+
+                else if( (entry.isIntersecting && entry.target.id==="fourthRow")){
+                  entry.target.classList.add("fade");
+                
+                  }
+
+                  else if( (entry.isIntersecting && entry.target.id==="fifthRow")){
+                    entry.target.classList.add("fade");
+                  
+                    }
+          })
+
+
+
+
+    },{ threshold: 0.5 } );
+
       
-      var elem= document.getElementById('firstRow');
-      ScrollAnimation(elem,1600,'fade');
+let projectRows= document.querySelectorAll('.animationUp');
+
+projectRows.forEach((projectRow) => {
+
+  observer.observe(projectRow);
+} );
+     
+
+let secondObserver= new IntersectionObserver((entries)=> {
+  entries.forEach((entry)=> {
+   
+    if(entry.isIntersecting && entry.target.id==="about-me-section" ) {
+      entry.target.classList.add("about-me-animation")
+    }
+    
+    else if(entry.isIntersecting && entry.target.id==="connect-section"){
+    entry.target.classList.add("about-me-animation")
+    }
+ })
 
 
-      var secondRow= document.getElementById('secondRow');
-      ScrollAnimation(secondRow,2250,'fade');
 
-      var thirdRow= document.getElementById('thirdRow');
-      ScrollAnimation(thirdRow,2600,'fade');
-  
 
-      var connect_section= document.getElementById('connect-section');
-      ScrollAnimation(connect_section,3250,'about-me-animation');
+},{ threshold: 0.33 } );
+
+
+secondObserver.observe(document.getElementById('about-me-section'));
+secondObserver.observe(document.getElementById('connect-section'));
+
+
+
 
  
 // end of scroll functions in JS
