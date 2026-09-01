@@ -1,4 +1,4 @@
-let hidden_menu=document.getElementById('hidden-menu');  
+let hidden_menu=document.getElementById('hidden_menu');  
 let body= document.getElementById("Body");
 const links= document.querySelectorAll("#c ul li");
 links.forEach(link => {
