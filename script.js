@@ -194,8 +194,7 @@ secondObserver.observe(document.getElementById('connect-section'));
 // end of scroll functions in JS
 
    let dayOrNight=mode=localStorage.getItem('mode') || 'night';
-   const mobileMenu = document.getElementById('c');
-   dayAndNightElemments=document.querySelectorAll('.nightIcon');
+   let dayAndNightElemments=document.querySelectorAll('.nightIcon');
    const lampSound= new Audio('light-switch.mp3');
    dayAndNightElemments.forEach(dayNite => {
    dayNite.addEventListener('click',() =>
@@ -204,7 +203,7 @@ secondObserver.observe(document.getElementById('connect-section'));
           dayNite.classList.toggle('fa-moon');
           dayNite.classList.toggle('fa-sun');
           body.classList.toggle('day');
-          mobileMenu.style.transition="none";
+          hidden_menu.style.transition="none";
 
           if(sound===true) {
             lampSound.play();
@@ -223,7 +222,7 @@ secondObserver.observe(document.getElementById('connect-section'));
           
           }
           setTimeout(() => {
-            mobileMenu.style.transition = "";
+            hidden_menu.style.transition = "";
           }, 200);
       })
       
