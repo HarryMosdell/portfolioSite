@@ -1,18 +1,18 @@
-var zx=document.getElementById('c');  
-var body= document.getElementById("Body");
+let hidden_menu=document.getElementById('hidden-menu');  
+let body= document.getElementById("Body");
 const links= document.querySelectorAll("#c ul li");
 links.forEach(link => {
    link.addEventListener('click', function() {
-      zx.style.transition = "none";
-      zx.style.opacity = 0;
-      zx.classList.remove("left-0");
+      hidden_menu.style.transition = "none";
+      hidden_menu.style.opacity = 0;
+      hidden_menu.classList.remove("left-0");
       body.classList.toggle("overflow-hidden");
       body.style.position = '';
       body.style.width = '';
 
       setTimeout(() => {
-    zx.style.transition = "all 1.2s";
-    zx.style.opacity = 1; // Reset opacity style to allow CSS default when showing nav again
+    hidden_menu.style.transition = "all 1.2s";
+    hidden_menu.style.opacity = 1; // Reset opacity style to allow CSS default when showing nav again
   }, 2000);
    }
      
@@ -24,15 +24,14 @@ links.forEach(link => {
 
 
 xcross=document.getElementById('x-cross');
-onv= document.getElementById('mm');
-xxxxxx= document.getElementById('c');
-Body= document.getElementById("Body");
-onv.addEventListener('click', function() {
+hamburger_menu= document.getElementById('hamburger_menu');
+
+hamburger_menu.addEventListener('click', function() {
     
-    xxxxxx.classList.toggle("left-0");
-    Body.classList.toggle("overflow-hidden");
-    Body.style.position = 'fixed';
-    Body.style.width = '100%';
+    hidden_menu.classList.toggle("left-0");
+    body.classList.toggle("overflow-hidden");
+    body.style.position = 'fixed';
+    body.style.width = '100%';
      if (sound===true) {
         
           sound1.play();
@@ -42,10 +41,10 @@ onv.addEventListener('click', function() {
 
 xcross.addEventListener('click', function() {
 
-Body.classList.toggle("overflow-hidden");
-xxxxxx.classList.toggle("left-0");
-Body.style.position = '';
-Body.style.width = '';
+body.classList.toggle("overflow-hidden");
+hidden_menu.classList.toggle("left-0");
+body.style.position = '';
+body.style.width = '';
  if (sound===true) {
         
           sound1.play();
@@ -195,7 +194,6 @@ secondObserver.observe(document.getElementById('connect-section'));
 // end of scroll functions in JS
 
    let dayOrNight=mode=localStorage.getItem('mode') || 'night';
-   bodyElement= document.getElementById('Body');
    const mobileMenu = document.getElementById('c');
    dayAndNightElemments=document.querySelectorAll('.nightIcon');
    const lampSound= new Audio('light-switch.mp3');
@@ -205,7 +203,7 @@ secondObserver.observe(document.getElementById('connect-section'));
   {
           dayNite.classList.toggle('fa-moon');
           dayNite.classList.toggle('fa-sun');
-          bodyElement.classList.toggle('day');
+          body.classList.toggle('day');
           mobileMenu.style.transition="none";
 
           if(sound===true) {
@@ -237,7 +235,7 @@ secondObserver.observe(document.getElementById('connect-section'));
 
    mode=localStorage.getItem('mode');
    if(mode=== 'day') {
-    bodyElement.classList.add('day');
+    body.classList.add('day');
     dayAndNightElemments.forEach(dayNite => {
       dayNite.classList.remove('fa-moon');
       dayNite.classList.add('fa-sun');
