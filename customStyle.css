@@ -77,33 +77,33 @@ li:hover  .display-blur{
 
 
 
-#mm :nth-child(1) {
+#hamburger_menu :nth-child(1) {
     width:40px; 
     height:1px; 
     background-color: beige;
 }
 
-#mm :nth-child(2) {
+#hamburger_menu :nth-child(2) {
     width:33px; 
     height:1px; 
     background-color: beige; 
     margin-top: 5px;
 }
 
-#mm :nth-child(3) {
+#hamburger_menu :nth-child(3) {
     width:27px; 
     height:1px; 
     background-color: beige; 
     margin-top: 5px;
 }
 
-body.day #mm :nth-child(1) {
+body.day #hamburger_menu :nth-child(1) {
     background-color: black!important;
 }
-body.day #mm :nth-child(2) {
+body.day #hamburger_menu :nth-child(2) {
     background-color: black!important;
 }
-body.day #mm :nth-child(3) {
+body.day #hamburger_menu :nth-child(3) {
     background-color: black!important;
 }
 
@@ -597,7 +597,7 @@ body.day #showMoreButton span {
 }
 
 
-body.day #mm:nth-child()  {
+body.day #hamburger_menu:nth-child()  {
   background-color: black!important; 
 }
 
