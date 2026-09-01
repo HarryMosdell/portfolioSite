@@ -1,6 +1,6 @@
 let hidden_menu=document.getElementById('hidden_menu');  
 let body= document.getElementById("Body");
-const links= document.querySelectorAll("#c ul li");
+const links= document.querySelectorAll("#hidden_menu ul li");
 links.forEach(link => {
    link.addEventListener('click', function() {
       hidden_menu.style.transition = "none";
