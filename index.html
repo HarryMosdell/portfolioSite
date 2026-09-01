@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <title> web</title>
+  <title> Harry Mosdell</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
   integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
@@ -13,7 +15,16 @@
 <link rel="stylesheet" href="customStyle.css">
 </head>
   <body class=""  id="Body">
-
+    <script>
+       
+        function Load() {
+          let mode = localStorage.getItem('mode') || "night";
+          if (mode === "day") {
+            document.body.classList.add('day');
+          }
+        }
+        Load();
+      </script>
    <main>
     <nav id="vb" class="position-relative " style="">
 
@@ -52,9 +63,9 @@
 </div>
 </div>
 
-<div id="c" class="d-flex flex-column left-100  d-md-none bottom-0 pb-1"> 
-    <div  id="x-cross" class="bg-black d-block d-md-none mb-2 position-relative ">
-        <div class="position-absolute translate-middle-x mt-2" style="right:12%; top:25px;">
+<div id="hidden_menu" class="d-flex flex-column left-100  d-md-none bottom-0 pb-1"> 
+    <div style="height:44px; width:44px; left: 90%;" id="x-cross" class="d-block d-md-none mb-2 position-relative ">
+        <div class="position-absolute translate-middle-x mt-2" style="top:25px;">
             <div class="position-relative d-block">
     <div class="position-absolute x-left" style=""></div>
     <div class="position-absolute x-right" ></div>
@@ -77,15 +88,16 @@
 </div>
 <div class="d-flex flex-column gap-2 flex-grow-1 justify-content-end">
 
-<div class="mobile-menu-line" > </div>
+<div style="padding-bottom:80px;" class="d-flex gap-3 justify-content-center align-items-center" id="bottom-mobile-nav">
+<div class="mobile-menu-line flex-grow-1" > </div>
 
-<div class="d-flex gap-3 justify-content-center " id="bottom-mobile-nav">
-<a style="color:transparent;" href="https://www.linkedin.com/in/harry-mosdell-82385418b/" target="_blank">   <i class="fa fa-linkedin "></i> </a>
-<a style="color:transparent;" href="https://github.com/HarryMosdell" target="_blank">   <i class="fa fa-github " ></i> </a>
-<a style="color:transparent;" href="mailto:harry.mosdell1@gmail.com" target="_blank">    <i class="fa fa-envelope d-block"></i> </a>
+<a style="color: white;" href="https://www.linkedin.com/in/harry-mosdell-82385418b/" target="_blank">   <i class="fa fa-linkedin "></i> </a>
+<a style="color: white;" href="https://github.com/HarryMosdell" target="_blank">   <i class="fa fa-github " ></i> </a>
+<a style="color: white;" href="mailto:harry.mosdell1@gmail.com" target="_blank">    <i class="fa fa-envelope d-block"></i> </a>
 
+<div class="mobile-menu-line flex-grow-1" > </div>
 </div>
-<div class="mobile-menu-line" > </div>
+
 </div>
 </div>
 
@@ -180,22 +192,47 @@
 
 <section id="lp">
 
-<div id="current-tech" class="text-center  margin-top-150 position-relative"> 
+<div id="current-tech" class="margin-top-150 position-relative"> 
     
-    <h1 class="text-white font-size-50px mt-5 mt-md-0"> Current Technologies I Use</h1>
+    <h1 class="text-white font-size-50px mt-5 mt-md-0 text-center"> Current Technologies I Use</h1>
 
-<div class="d-flex flex-wrap mt-5 px-4">
- <button class="px-3 px-md-5 py-2 py-md-3 me-3 me-md-5 mb-4 bg-button-navy  border-5 button-trigger element-hidden" > HTML</button>
- <button class="px-3 px-md-5 py-2 py-md-3  me-3 me-md-5 mb-4 bg-button-navy  border-5 button-trigger element-hidden" > CSS</button>
- <button class="px-3  px-md-5 py-2 py-md-3  me-3 me-md-5 mb-4 bg-button-navy  border-5 button-trigger element-hidden" > TAILWIND</button>
- <button class="px-3  px-md-5 py-2 py-md-3  me-3 me-md-5 mb-4 bg-button-navy  border-5 button-trigger element-hidden" > BOOTSTRAP</button>
- <button class="px-3 px-md-5 py-2 py-md-3  me-3 me-md-5 mb-4 bg-button-navy  border-5 button-trigger element-hidden" > JAVASCRIPT</button>
- <button class="px-3  px-md-5 py-2 py-md-3  me-3 me-md-5 mb-4 bg-button-navy  border-5 button-trigger element-hidden" > PHP</button>
- <button class="px-3  px-md-5 py-2 py-md-3  me-3 me-md-5  mb-4 bg-button-navy  border-5 button-trigger element-hidden" > LARAVEL</button>
- <button class="px-3  px-md-5 py-2 py-md-3  me-3 me-md-5  mb-4 bg-button-navy  border-5 button-trigger element-hidden"> SQL</button>
+<div class=" mt-3 mt-md-5 px-4 mt-3 mt-md-0">
+<h2 class=" button-trigger element-hidden text-white d-block d-md-none">Front End Stack</h2>
+<p class=" button-trigger element-hidden d-md-block d-none ">Front End Stack</p>
 
+<div class="d-flex flex-wrap mt-3 mt-md-4">
+ <button  class="px-3 px-md-3 py-2 py-md-1 me-3 me-md-5 mb-4 bg-button-navy  border-5 button-trigger element-hidden" > HTML</button>
+ <button class="px-3 px-md-3 py-2 py-md-1  me-3 me-md-5 mb-4 bg-button-navy  border-5 button-trigger element-hidden" > CSS</button>
+ <button class="px-3  px-md-3 py-2 py-md-1  me-3 me-md-5 mb-4 bg-button-navy  border-5 button-trigger element-hidden" > JAVASCRIPT</button>
+ <button class="px-3  px-md-3 py-2 py-md-1  me-3 me-md-5 mb-4 bg-button-navy  border-5 button-trigger element-hidden" > TYPESCRIPT</button>
+
+ <button class="px-3  px-md-3 py-2 py-md-1  me-3 me-md-5 mb-4 bg-button-navy  border-5 button-trigger element-hidden" > TAILWIND</button>
+ <button class="px-3  px-md-3 py-2 py-md-1  me-3 me-md-5 mb-4 bg-button-navy  border-5 button-trigger element-hidden" > BOOTSTRAP</button>
+ <button class="px-3  px-md-3 py-2 py-md-1  me-3 me-md-5 mb-4 bg-button-navy  border-5 button-trigger element-hidden" > LESS</button>
+ <button class="px-3  px-md-3 py-2 py-md-1  me-3 me-md-5 mb-4 bg-button-navy  border-5 button-trigger element-hidden" > SCSS</button>
+ <button class="px-3  px-md-3 py-2 py-md-1  me-3 me-md-5 mb-4 bg-button-navy  border-5 button-trigger element-hidden" > REACT</button>
 
 </div>
+
+</div>
+
+<div class="px-4 mb-3 mb-md-0 mt-3 mt-md-0">
+    <h2 class=" button-trigger element-hidden text-white d-block d-md-none ">Backend End Stack</h2>
+    <p class=" button-trigger element-hidden d-md-block d-none ">Backend End Stack</p>
+
+    <div class="d-flex flex-wrap mt-3 mt-md-4"  >
+        <button class="px-3  px-md-3 py-2 py-md-1  me-3 me-md-5 mb-4 bg-button-navy  border-5 button-trigger element-hidden" > PHP</button>
+
+     <button class="px-3  px-md-3 py-2 py-md-1  me-3 me-md-5 mb-4 bg-button-navy  border-5 button-trigger element-hidden" > SQL</button>
+     <button class="px-3  px-md-3 py-2 py-md-1  me-3 me-md-5 mb-4 bg-button-navy  border-5 button-trigger element-hidden" > LARAVEL</button>
+     <button class="px-3  px-md-3 py-2 py-md-1  me-3 me-md-5 mb-4 bg-button-navy  border-5 button-trigger element-hidden" > NODE.JS</button>
+
+    
+    </div>
+    
+    </div>
+
+
 
 </div>
 
@@ -204,13 +241,14 @@
 <section id="previous-projects">
 
 <div>
-<div class="margin-top-100 position-relative element-hidden" id="firstRow" >
-    
     <h1 class="mb-4 mb-md-0 text-center font-size-50px" style="">  Previous Projects </h1> 
+
+<div class="margin-top-100 position-relative element-hidden animationUp" id="firstRow" >
+    
     <div class="blur-bg-20" > </div>
 
  <div class="row margin-top-100 ">
-<div class="col-md-6 px-5 ">
+<div class="col-md-6 px-4 px-md-5">
     <div class="col-md-12  justify-content-center d-flex px-0 mt-4 mt-md-0 previous-project-image-card-border" >
        
         <div class="col-md-12 border-5 border-danger">
@@ -221,7 +259,7 @@
         </div>
 
     </div>
-    <div class="col-md-6 position-relative mt-4 mt-md-0 px-4 px-md-0"> <h1 class="text-center" > TGR Fitness</h1> 
+    <div class="col-md-6 position-relative mt-4 mt-md-0 px-4 px-md-2 px-xxxl-0"> <h1 class="text-center" > TGR Fitness</h1> 
 
         
         <p> 
@@ -238,25 +276,25 @@
 
  </div>
 
- <div class="row margin-top-100  element-hidden" id="secondRow">
-    <div class="col-md-6 px-5 ">
+ <div class="row margin-top-100  element-hidden animationUp" id="secondRow">
+
+         <div class="col-md-6 px-4 px-md-5 ">
         <div class="col-md-12  justify-content-center d-flex px-0  mt-4 mt-md-0 previous-project-image-card-border">
            
             <div class="col-md-12 border-5 border-danger">
-                <a href="https://harrymosdell.github.io/royalMailWebsiteReplica/" target="_blank" > 
-                <img src="royalMail.png" class="w-100" alt=""> 
+                <a href="https://harrymosdell.github.io/chelseaReplica/" target="_blank" > 
+                <img src="chelseaSite.png" class="w-100" alt=""> 
             </a>
             </div>
             </div>
     
         </div>
-        <div class="col-md-6 position-relative mt-4 mt-md-0 px-4 px-md-0"> <h1 class="text-center"> Royal Mail Replica </h1> 
+        <div class="col-md-6 position-relative mt-4 mt-md-0 px-4 px-md-2 px-xxxl-0"> <h1 class="text-center"> Chelsea Website Replica </h1> 
     <div class="blur-bg-30"></div>
 
             <p> 
             
-                 A fully responsive front-end replica of the Royal Mail homepage, The project closely mimics the structure, layout, and visual style of the original 
-                 site, with attention to responsive navigation, modern layout patterns, and mobile usability
+                 This project is a fully responsive front-end replica of the Chelsea football club homepage, The project closely mimics the structure, layout, and visual style of the original site, with attention to responsive navigation, modern layout patterns, and mobile usability
                  This project highlights my ability to interpret and reproduce complex UI components from scratch.
                  
             </p>
@@ -266,23 +304,22 @@
     
      </div>
 
-     <div id="thirdRow" class="row margin-top-100 element-hidden" >
-        <div class="col-md-6 px-5">
+     <div id="thirdRow" class="row margin-top-100 element-hidden animationUp" >
+        <div class="col-md-6 px-4 px-md-5">
             <div class="col-md-12  justify-content-center d-flex px-0  mt-4 mt-md-0 previous-project-image-card-border"  >
                
                 <div class="col-md-12 border-5 border-danger">
-                    <a href="https://harrymosdell.github.io/ArsenalWebsiteCopy/" target="_blank" >
-                    <img src="ArsenalReplica.png" class="w-100" alt=""> 
+                    <a href="https://harrymosdell.github.io/GameReplica/" target="_blank" >
+                    <img src="Game1.png" class="w-100" alt=""> 
                      </a>
                 </div>
                 </div>
         
             </div>
-            <div class="col-md-6 position-relative  mt-4 mt-md-0 px-4 px-md-0"> <h1 class="text-center" > Arsenal Website Replica</h1> 
-                <p> This project is a fully responsive front-end replica of the Arsenal FC homepage. Built 
-                    entirely from scratch, it was designed to closely mirror the original site's layout,
-                    and user interface. The goal was to practice real-world responsive design techniques
-                     while replicating a professional-grade website to showcase my skillset.
+            
+            <div class="col-md-6 position-relative  mt-4 mt-md-0 px-4 px-md-2 px-xxxl-0"> <h1 class="text-center" > Game Website Replica</h1> 
+                <p> A fully responsive front-end replica of the Game homepage. Entirely custom made, it was designed to closely replicate the original site's layout,
+                    and user interface. The aim was to practice real-world responsive design techniques and to add interactive Javascript such as a functional shopping basket whilst replicating a top-tier website to showcase my skillset.
                 </p>
                 
                 
@@ -293,40 +330,61 @@
         
        
 
-<div id="hiddenElements" class="hidden" >
-    <div class="row margin-top-100 ">
-        <div class="col-md-6 px-5 ">
-            <div class="col-md-12 mt-4 mt-md-0 justify-content-center d-flex px-0 previous-project-image-card-border"  >
-               
-                <div class="col-md-12 border-5 border-danger">
+         <div id="hiddenElements" class="hidden">
+        <div class="row margin-top-100  element-hidden animationUp" id="firstRow">
 
-                    <a href="https://www.programmingblogs.co.uk" target="_blank" >
-                    <img src="programmingBlogs.png" class="w-100" alt=""> 
-                    </a>
-                </div>
-                </div>
-        
+         <div class="col-md-6 px-4 px-md-5 ">
+        <div class="col-md-12  justify-content-center d-flex px-0  mt-4 mt-md-0 previous-project-image-card-border">
+           
+            <div class="col-md-12 border-5 border-danger">
+                <a href="https://harrymosdell.github.io/royalMailWebsiteReplica/" target="_blank" > 
+                <img src="royalMail.png" class="w-100" alt=""> 
+            </a>
             </div>
-            <div class="col-md-6 position-relative mt-4 mt-md-0 px-4 px-md-0"  > <h1 class="text-center" > Programming Blogs</h1> 
-        
-                
-                <p> 
-                    This was a project I created to help support novice programmers understand the fundamental concepts of web 
-                    development. I regularly post new articles on the blog page covering essential topics for fellow programmers 
-                    to read and learn from. 
-                </p>
-                
-                </div>
-         </div>
-            
-         
-        
-         </div>
+            </div>
+    
+        </div>
+        <div class="col-md-6 position-relative mt-4 mt-md-0 px-4 px-md-2 px-xxxl-0"> <h1 class="text-center"> Royal Mail Replica </h1> 
+  
 
-</div>
+            <p> 
+            
+                 A fully responsive front-end replica of the royal mail website, The project closely mimics the structure, layout, and visual style of the original site, with attention to responsive navigation, modern layout patterns, and mobile usability
+                 This project highlights my ability to interpret and reproduce complex UI components from scratch.
+                 
+            </p>
+     </div>
+        
+     
+    
+     </div>
+          
+            <!-- second row (also INSIDE #hiddenElements) -->
+      <div class="row margin-top-100 element-hidden animationUp" id="secondRow">
+              <div class="col-md-6 px-5">
+                <div class="col-md-12 mt-4 mt-md-0 justify-content-center d-flex px-0 previous-project-image-card-border">
+                  <div class="col-md-12 border-5 border-danger">
+                   <a href="https://harrymosdell.github.io/ArsenalWebsiteCopy/" target="_blank" >
+                            <img src="ArsenalReplica.png" class="w-100" alt=""> 
+                             </a>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="col-md-6 position-relative mt-4 mt-md-0 px-4 px-md-2 px-xxxl-0">
+                <h1 class="text-center">Arsenal Website Replica</h1>
+                <p>This project is a fully responsive front-end replica of the Arsenal FC homepage. Built 
+                            entirely from scratch, it was designed to closely mirror the original site's layout,
+                            and user interface. The goal was to practice real-world responsive design techniques
+                             while replicating a professional-grade website to showcase my skillset.
+                </p>
+              </div>
+            </div>
+          </div>
+          
 
 <div class="margin-top-100"> 
-    <button id="showMoreButton" class="g px-5 py-3 m-auto mb-4 bg-button-navy d-block  border-5 d-flex" style="">
+    <button id="showMoreButton" class="g px-5 py-3 m-auto mb-4 bg-button-navy d-block show-more-radius  border-5 d-flex" style="">
         <span id="showMoreButtonText" class="mb-0 me-3 lime-text">Show More</span>
 
         <span id="downArrows" class="mt-1 bounce-animation text-white">
@@ -339,6 +397,7 @@
           <i class="fa-solid fa-angle-up d-block" style="margin-top:-10px;"></i>
         </span>
             </button>
+</div>
 </div>
 </section>
 
