@@ -142,7 +142,7 @@ height:100px;
         opacity: 1!important;
     }
 
-#c {
+#hidden_menu {
 top:0%;
 width:100vw;
 position:fixed; 
@@ -167,7 +167,7 @@ background-color: beige;
     }
 
 
-#c ul{
+#hidden_menu ul{
 
     font-size: 35px; 
 }
@@ -601,12 +601,12 @@ body.day #hamburger_menu:nth-child()  {
   background-color: black!important; 
 }
 
-body.day #c  {
+body.day #hidden_menu {
   background-color: white!important; /* Choose a light color */
   color:#1ea19a!important; 
 }
 
-body.day #c .mobile-menu-line {
+body.day #hidden_menu .mobile-menu-line {
   background-color: black!important; /* Choose a light color */
   
 }
